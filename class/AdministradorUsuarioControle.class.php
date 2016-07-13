@@ -1,16 +1,10 @@
 <?php
 
 require 'AdministradorUsuario.class.php';
-include 'config.php';
+require_once 'UsuarioControle.class.php';
+include_once 'config.php';
 
-class AdministradorUsuarioControle{
-    
-    private $db;
-    
-    public function __construct() {
-        $cf = new config();
-        $this->db = $cf->mysqlConnect();
-    }
+class AdministradorUsuarioControle extends UsuarioControle{
     
     public function listaTodos(){
         $result = $this->db->select("usuario", ["id", "nome", "sobrenome", "telefone", "cpf", "email"], ["administrador[=]" => 1]);

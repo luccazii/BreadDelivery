@@ -2,8 +2,8 @@
 
 include 'class/AdministradorUsuarioControle.class.php';
 
-$ac = new AdministradorUsuarioControle();
+$usuario = new Usuario();
+$usuario->setId(1);
 
-
-var_dump($ac->listaTodos());
-
+$uc = new UsuarioControle();
+echo "oi " . $uc->isAdministrador($usuario);
