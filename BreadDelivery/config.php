@@ -10,10 +10,10 @@ class config{
     private $mysqlDB;
     
     public function __construct(){
-        $this->database = "bread";
+        $this->database = "aluno_sushi";
         $this->host = "localhost";
-        $this->usuario = "root";
-        $this->senha = "";
+        $this->usuario = "aluno";
+        $this->senha = "aluno";
     }
     
     public function mysqlConnect(){
